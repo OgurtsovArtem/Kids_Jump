@@ -1,0 +1,68 @@
+@use "sass:math";
+// Переменные
+$fontFamily: Dosis;
+$mainFontSize: 16;
+$xlFontSize: 18;
+$xxlFontSize: 30;
+
+$maxWidth: 1920;
+$minWidth: 280;
+$maxWidthContainer: math.div(1320, $mainFontSize) + rem;
+
+//Z-Index
+$zIndexLight: 10;
+$zIndexNormal: 100;
+$zIndexHight: 1000;
+
+// Transition
+$transitionLight: 0.3s;
+$transitionNormal: 0.5s;
+$transitionHight: 0.8s;
+// Breakpoints
+$xxl: 2048;
+$xl: 1940;
+$l: 1460;
+$m: 1024;
+$s: 788;
+$xs: 520;
+$xxs: 376;
+
+// [COLORS]
+
+// [white]
+$mainWhiteColor: #fbfdff;
+$whiteColor: #ffffff;
+// [black]
+$mainBlackColor: #222a3f;
+$blackColor: #000;
+// [gray]
+$grayColor600: #9594aa;
+$grayColor300: #c0bfcd;
+$grayColor200: #e8e6f8;
+$grayColor100: #f1f6fe;
+$grayColor90: #f2f4f9;
+// [blue]
+$blueColor600: #363078;
+$blueColor500: #2a2fa3;
+$blueColor400: #2f73f6;
+$blueColor350: #2376F2;
+$blueColor300: #2f8fff;
+
+
+// [GRADIENTS]
+$gradient100: linear-gradient(212.15deg, #7deaff 23.82%, #5fa9ff 125.26%);
+$gradient200: linear-gradient(198.06deg, #2382f2 20.9%, #4659ff 88.7%);
+$gradient300: linear-gradient(97.95deg, #1f5dea 14.71%, #5c16ce 90.23%);
+$gradient400: linear-gradient(257.63deg, #342183 2.35%, #8228dc 98.49%);
+
+// [BUTTONS]
+$mainButtonColor: $gradient200;
+$gradientButtonColor: $gradient300;
+$disabledButtonColor: $grayColor300;
+
+// [TEXT]
+$textColor: $mainBlackColor;
+// $lightTextColor: $grayColor500;
+
+// [BURGER]
+$burgerColor: $whiteColor;

@@ -1,0 +1,75 @@
+@import "../../styles/functions.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/mixin.scss";
+
+.advantages-products {
+  @include adaptive-value("margin-top", 60, 200, $s);
+  @media (max-width: ($s+px)) {
+    @include adaptive-value("margin-top", 200, 100, $xxs);
+  }
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: rem(40);
+    @media (max-width: ($xs+px)) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__description-block {
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    color: $whiteColor;
+    gap: rem(15);
+    @media (max-width: ($s+px)) and (min-width: ($xs+px)) {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+  &__title-text {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    text-transform: uppercase;
+    @include adaptive-value("font-size", 104, 48, $xxs);
+  }
+  &__title-number {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%;
+    @include adaptive-value("font-size", 200, 96, $xxs);
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 155%;
+    color: $whiteColor;
+    max-width: rem(504);
+    @include adaptive-value("font-size", 20, 16, $xxs);
+    @include adaptive-value("margin-top", 40, 16, $xxs);
+  }
+  &__view-button {
+    flex-shrink: 0;
+    height: 100%;
+  }
+  &__cards {
+    margin-top: rem(40);
+  }
+  &__buttons {
+    display: flex;
+    gap: rem(20);
+  }
+  &__button-left {
+    justify-content: flex-start;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  &__card {
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixin.scss";
+@import "../../styles/functions.scss";
+.controls {
+  z-index: $zIndexLight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: rem(15);
+
+  &__button-left {
+    & svg {
+      transform: rotate(180deg);
+    }
+  }
+  &__pagination {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    @include adaptive-value("font-size", 20, 18, $xxs)
+  }
+}

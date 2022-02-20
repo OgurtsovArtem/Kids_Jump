@@ -1,0 +1,52 @@
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+.button {
+  background: $gradient200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 36px rgba(47, 230, 255, 0.2);
+  border-radius: 40px;
+  padding: rem(9);
+  transition: 0.1s;
+
+  &:disabled,
+  &[disabled]{
+    background: $grayColor300;
+    pointer-events: none;
+    .button__icon {
+      fill: $grayColor300;
+      stroke: $grayColor300;
+    }
+  }
+
+  &__icon {
+    @include adaptive-value("width", 54, 42, $xxs);
+    @include adaptive-value("height", 54, 42, $xxs);
+    border-radius: 50%;
+    background-color: $mainWhiteColor;
+    @include adaptive-value("padding-top", 14, 10, $xxs);
+    @include adaptive-value("padding-bottom", 14, 10, $xxs);
+    @include adaptive-value("padding-left", 10, 6, $xxs);
+    @include adaptive-value("padding-right", 10, 6, $xxs);
+    fill: $blueColor300;
+    stroke: $blueColor300;
+  }
+  &__text {
+    font-family: Dosis;
+    font-style: normal;
+    font-weight: 600;
+    @include adaptive-value("font-size", 20, 16, $xxs);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: $mainWhiteColor;
+    @include adaptive-value("padding-left", 52, 36, $xxs);
+    @include adaptive-value("padding-right", 32, 20, $xxs);
+  }
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+}

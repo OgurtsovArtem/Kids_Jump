@@ -1,0 +1,39 @@
+@import "../../styles/functions.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/mixin.scss";
+
+.image-slider {
+  &__main {
+    position: relative;
+  }
+  &__mini {
+    max-width: 60%;
+    margin-right: 0;
+  }
+  &__controls {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    gap: rem(20);
+
+  }
+  &__image-container {
+    filter: drop-shadow(0px 6px 20px rgba(61, 70, 118, 0.08));
+    &_mini {
+      & img {
+        border-radius: rem(15);
+      }
+    }
+  }
+  &__img {
+    border-radius: rem(30);
+  }
+  &__button-left {
+
+  }
+  &__button-right {
+    
+  }
+
+  
+}

@@ -1,0 +1,33 @@
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+.text-button {
+  background: $whiteColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 6px 20px rgb(61 70 118 / 8%);
+  border-radius: 40px;
+  transition: 0.1s;
+  color: $blueColor350;
+  &:disabled,
+  &[disabled]{
+    color: $grayColor300;
+    pointer-events: none;
+  }
+  @include adaptive-value("padding", 24, 20, $xxs);
+  max-width: rem(250);
+  width: 100%;
+  &__text {
+    font-family: Dosis;
+    font-style: normal;
+    font-weight: 600;
+    @include adaptive-value("font-size", 20, 14, $xxs);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: inherit;
+  }
+  &:active {
+    transform: scale(0.97);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}

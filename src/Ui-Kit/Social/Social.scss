@@ -1,0 +1,14 @@
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.social {
+  display: flex;
+  @include adaptive-value("gap", 18, 10, 0);
+
+  &__icon {
+    width: rem(25);
+    height: rem(25);
+    fill: $grayColor300;
+  }
+}
+

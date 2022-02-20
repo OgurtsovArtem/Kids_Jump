@@ -1,0 +1,67 @@
+@import "../../styles/functions.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/mixin.scss";
+
+.tabs-section {
+
+  &__title {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    @include adaptive-value("font-size", 104, 48,$xxs);
+    text-transform: uppercase;
+    color: $blueColor500;
+    text-align: center;
+    margin-bottom: rem(32);
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    @include adaptive-value("font-size", 20, 16,$xxs);
+    @include adaptive-value("line-height", 31, 23,$xxs);
+    margin-top: rem(32);
+
+    &_center {
+      text-align: center;
+    }
+  }
+  &__tabs-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: rem(36);
+    margin-top: rem(30);
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+  }
+  &__tab {
+    white-space: nowrap;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(80);
+    margin-top: rem(40);
+  }
+  &__photos {
+    min-width: 0;
+  }
+  &__description {
+
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @include adaptive-value("font-size", 32, 22,$xxs);
+    margin-bottom: rem(32);
+  }
+  &__list {
+    margin-top: rem(40);
+  }
+}

@@ -1,0 +1,85 @@
+@use "sass:math";
+@import "../../styles/functions.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/mixin.scss";
+
+.advantages-description {
+  display: flex;
+  flex-direction: column;
+  @include adaptive-value("gap", 80, 30, $xs);
+  justify-content: space-between;
+  @media screen and (min-width: ($xs+px)) {
+    flex-direction: row;
+  }
+  &__block {
+    align-self: center;
+    flex: 0 0 math.div(100%, 3);
+  }
+  &__title {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $blueColor500;
+    @include adaptive-value("font-size", 104, 48, $xxs);
+    @include adaptive-value("margin-bottom", 40, 20, $xxs);
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    @include adaptive-value("font-size", 18, 14, $xxs);
+    @include adaptive-value("margin-top", 30, 15, $xxs);
+  }
+  &__cards {
+    min-width: 0;
+    @media screen and (min-width: ($m+1px)) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 1fr;
+    }
+  }
+  &__card {
+    text-align: center;
+
+    @media screen and (min-width: ($m+1px)) {
+      &:nth-child(1) {
+        grid-column-start: 2;
+        grid-column-end: 6;
+
+        grid-row-start: 1;
+        grid-row-end: 5;
+      }
+      &:nth-child(2) {
+        grid-column-start: 8;
+        grid-column-end: 12;
+
+        grid-row-start: 2;
+        grid-row-end: 6;
+      }
+      &:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+
+        grid-row-start: 6;
+        grid-row-end: 10;
+      }
+
+      &:nth-child(4) {
+        grid-column-start: 7;
+        grid-column-end: 11;
+
+        grid-row-start: 7;
+        grid-row-end: 11;
+      }
+    }
+  }
+
+  &__controls {
+    max-width: rem(180);
+    @media screen and (min-width: ($xs+px)) {
+      margin: 0 auto;
+    }
+  }
+}
