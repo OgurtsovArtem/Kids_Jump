@@ -1,0 +1,28 @@
+@import "../../styles/constants.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.check-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  &__icon {
+    width: rem(30);
+    height: rem(30);
+    margin-right: rem(15);
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    @include adaptive-value("font-size", 20, 14, $xxs);
+    line-height: 155%;
+  }
+  &__item {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: rem(14);
+    }
+  }
+}

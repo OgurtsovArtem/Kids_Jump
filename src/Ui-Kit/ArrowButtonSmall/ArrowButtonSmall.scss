@@ -3,8 +3,6 @@
 @import "../../styles/mixin.scss";
 
 .arrow-button-small {
-  width: rem(48);
-  height: rem(48);
   background-color: $whiteColor;
   display: flex;
   justify-content: center;
@@ -13,12 +11,14 @@
   border-radius: 50%;
   transition: 0.1s;
   flex-shrink: 0;
+  @include adaptive-value("width", 48, 40, $xxs);
+  @include adaptive-value("height", 48, 40, $xxs);
   &:active {
     transform: scale(0.97);
-    box-shadow: -2px 2px 6px rgba(0,0,0,0.2);
+    box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
   }
   &:disabled,
-  &[disabled]{
+  &[disabled] {
     pointer-events: none;
     .arrow-button-small__icon {
       fill: $grayColor300;
@@ -30,5 +30,4 @@
     width: 55%;
     height: 70%;
   }
-
 }

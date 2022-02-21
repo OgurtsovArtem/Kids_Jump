@@ -3,8 +3,20 @@
 @import "../../styles/mixin.scss";
 
 .image-slider {
+  position: relative;
+  min-width: 0;
+  @media (max-width: ($s+px)) and (min-width: ($xs+px)) {
+    display: flex;
+    gap: rem(40);
+  }
+
   &__main {
     position: relative;
+    flex: 0 0 70%;
+    @include adaptive-value("margin-bottom", 50, 15, $xxs);
+    @media (max-width: ($s+px)) and (min-width: ($xs+px)) {
+      margin-bottom: 0;
+    }
   }
   &__mini {
     max-width: 60%;
@@ -12,10 +24,21 @@
   }
   &__controls {
     position: absolute;
-    bottom: 10%;
+    bottom: 34%;
     right: 5%;
     gap: rem(20);
-
+    @media (max-width: ($s+px)) and (min-width: ($xs+px)) {
+      bottom: 6%;
+      right: 34%;
+    }
+    @media (max-width: ($xs+px)) {
+      bottom: 6%;
+      right: 70%;
+    }
+    @media (max-width: ($xxs+px)) {
+      bottom: 3%;
+      right: 64%;
+    }
   }
   &__image-container {
     filter: drop-shadow(0px 6px 20px rgba(61, 70, 118, 0.08));
@@ -29,11 +52,7 @@
     border-radius: rem(30);
   }
   &__button-left {
-
   }
   &__button-right {
-    
   }
-
-  
 }
