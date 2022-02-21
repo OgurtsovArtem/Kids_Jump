@@ -57,6 +57,10 @@
     flex-shrink: 0;
     height: 100%;
   }
+  &__swiper {
+    @include adaptive-value("padding-top", 15, 10, $xxs);
+    @include adaptive-value("padding-bottom", 15, 10, $xxs);
+  }
   &__cards {
     margin-top: rem(40);
   }

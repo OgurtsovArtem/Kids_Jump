@@ -40,6 +40,10 @@
       grid-auto-rows: 1fr;
     }
   }
+  &__swiper {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+  }
   &__card {
     text-align: center;
 
