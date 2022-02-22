@@ -1,0 +1,85 @@
+@import "../../styles/functions.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/mixin.scss";
+
+.warranty-section {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptive-value("gap", 80, 30, $xxs);
+    @media (max-width: ($xs+px)) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__left-box {
+  }
+  &__right-box {
+    align-self: center;
+    max-width: rem(456);
+  }
+  &__title {
+    font-family: Lifehack Sans;
+    font-style: normal;
+    font-weight: 800;
+    color: $blueColor400;
+    text-align: center;
+    &_accent {
+      @include adaptive-value("font-size", 200, 96, $xxs);
+      line-height: 90%;
+    }
+    &_text {
+      @include adaptive-value("font-size", 100, 48, $xxs);
+      line-height: 100%;
+    }
+    @include adaptive-value("margin-bottom", 80, 36, $xxs);
+  }
+  &__subtitle {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @include adaptive-value("font-size", 32, 22, $xxs);
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    @include adaptive-value("font-size", 20, 16, $xxs);
+    @include adaptive-value("margin-top", 30, 15, $xxs);
+  }
+  &__cards {
+    @media (min-width: ($s+1px)) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      @include adaptive-value("gap", 60, 40, $xxs);
+    }
+    @media (max-width: ($xs+px)) {
+      grid-row-start: 2;
+    }
+  }
+  &__card {
+    @media (min-width: ($s+1px)) {
+      max-width: rem(286);
+      &:nth-child(1) {
+        grid-area: 1/1/4/1;
+      }
+      &:nth-child(2) {
+        grid-area: 2/2/5/2;
+      }
+    }
+
+    &_desctop {
+      display: block;
+      @media (max-width: ($s+px)) and (min-width: ($xs+px)) {
+        display: none;
+      }
+    }
+    &_mobile {
+      display: none;
+      @media (max-width: ($s+px)) and (min-width: ($xs+px)) {
+        display: block;
+        margin-top: rem(20);
+      }
+    }
+  }
+}

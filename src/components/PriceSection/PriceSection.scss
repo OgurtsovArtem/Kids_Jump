@@ -1,0 +1,50 @@
+@import "../../styles/functions.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/mixin.scss";
+
+.price-section {
+  @include adaptive-value("padding-top", 500, 140, $xxs);
+  @include adaptive-value("padding-bottom", 220, 120, $xxs);
+  background-image: url("../../images/PriceSection/bg.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  @media (max-width: ($l+px)) {
+    background-position: 24%;
+  }
+  @media (max-width: ($s+px)) {
+    background-position: 3%;
+  }
+
+  &__container {
+  }
+  &__title {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    color: $whiteColor;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    @include adaptive-value("font-size", 104, 48, $xxs);
+  }
+  &__text {
+    color: $whiteColor;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%;
+    text-align: center;
+    max-width: rem(500);
+    margin: 0 auto;
+    @include adaptive-value("font-size", 20, 16, $xxs);
+    @include adaptive-value("margin-top", 40, 20, $xxs);
+  }
+  &__cards-container {
+    display: flex;
+    justify-content: center;
+    @include adaptive-value("gap", 80, 20, $xxs);
+    @include adaptive-value("margin-top", 80, 30, $xxs);
+  }
+  &__card {
+  }
+}
