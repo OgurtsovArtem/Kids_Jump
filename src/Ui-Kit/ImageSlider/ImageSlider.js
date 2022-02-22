@@ -27,6 +27,7 @@ function ImageSlider() {
     },
     788: {
       direction: "horizontal",
+      spaceBetween: 25,
     },
   };
   const navigation = {

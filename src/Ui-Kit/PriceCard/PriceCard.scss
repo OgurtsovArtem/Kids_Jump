@@ -1,0 +1,45 @@
+@import "../../styles/functions.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/mixin.scss";
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $whiteColor;
+  box-shadow: 0px rem(18) rem(60) rgba(61, 70, 118, 0.1);
+  border-radius: rem(30);
+  transition: transform $transitionLight ease-in-out;
+  @include adaptive-value("padding", 50, 20, $xxs);
+
+  &:hover {
+    transform: translateY(rem(-5));
+    box-shadow: 0 rem(4) rem(6) rem(-7) rgb(0 0 0 / 10%),
+      0 rem(4) rem(30) rem(-9) rgb(0 0 0 / 20%);
+  }
+  &__image-box {
+  }
+  &__image {
+    max-width: 340px;
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @include adaptive-value("font-size", 32, 22, $xxs);
+    @include adaptive-value("margin-top", 50, 10, $xxs);
+  }
+  &__price {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 120%;
+    @include adaptive-value("font-size", 72, 32, $xxs);
+    @include adaptive-value("margin-top", 38, 14, $xxs);
+  }
+  &__button {
+    max-width: rem(260);
+    @include adaptive-value("margin-top", 53, 20, $xxs);
+  }
+}

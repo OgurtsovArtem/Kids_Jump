@@ -1,7 +1,7 @@
 @import "../../styles/functions.scss";
 @import "../../styles/mixin.scss";
 .button {
-  background: $gradient200;
+  background: $gradient300;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   transition: 0.1s;
 
   &:disabled,
-  &[disabled]{
+  &[disabled] {
     background: $grayColor300;
     pointer-events: none;
     .button__icon {
@@ -48,5 +48,4 @@
     transform: scale(0.97);
     box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
   }
-  
 }
