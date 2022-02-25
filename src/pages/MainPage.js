@@ -4,6 +4,7 @@ import Advantages from "../components/Advantages/Advantages";
 import TabsSection from "../components/TabsSection/TabsSection";
 import PriceSection from "../components/PriceSection/PriceSection";
 import WarrantySection from "../components/WarrantySection/WarrantySection";
+import PackageSection from "../components/PackageSection/PackageSection";
 
 function MainPage() {
   return (
@@ -14,6 +15,7 @@ function MainPage() {
       <TabsSection />
       <PriceSection />
       <WarrantySection />
+      <PackageSection />
     </>
   );
 }
