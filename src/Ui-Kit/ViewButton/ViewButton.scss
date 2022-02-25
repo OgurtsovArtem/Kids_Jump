@@ -10,7 +10,7 @@
   transition: 0.1s;
   color: $blueColor600;
   &:disabled,
-  &[disabled]{
+  &[disabled] {
     background: $grayColor300;
     color: $whiteColor;
     pointer-events: none;
@@ -26,7 +26,6 @@
   &__icon {
     @include adaptive-value("width", 36, 30, $xxs);
     @include adaptive-value("height", 36, 30, $xxs);
-    border-radius: 50%;
     fill: $blueColor300;
     stroke: $blueColor300;
   }

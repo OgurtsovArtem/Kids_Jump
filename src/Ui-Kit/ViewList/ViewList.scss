@@ -1,0 +1,31 @@
+@import "../../styles/constants.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.view-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    transition: $transitionLight;
+    &._active {
+      .view-list__icon {
+        fill: $blueColor300;
+        stroke: $blueColor300;
+      }
+    }
+    @include adaptive-value("margin-bottom", 20, 16, $xxs);
+  }
+  &__icon {
+    fill: $grayColor300;
+    stroke: $grayColor300;
+    @include adaptive-value("width", 36, 29, $xxs);
+    @include adaptive-value("height", 30, 24, $xxs);
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%;
+    @include adaptive-value(" font-size", 20, 16, $xxs);
+    @include adaptive-value("margin-left", 20, 16, $xxs);
+  }
+}
