@@ -1,4 +1,7 @@
 import PriceCard from "../../Ui-Kit/PriceCard/PriceCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
 
 import "../../styles/technicalClasses.scss";
 import "./PriceSection.scss";
@@ -13,8 +16,19 @@ function PriceSection() {
           usually all equipment is in stock.
         </p>
         <div className="price-section__cards-container">
-          <PriceCard className="price-section__card" />
-          <PriceCard className="price-section__card" />
+          <Swiper
+            className="price-section__swiper _swiper _auto-width"
+            spaceBetween={40}
+            slidesPerView="auto"
+            freeMode={true}
+          >
+            <SwiperSlide>
+              <PriceCard className="price-section__card" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <PriceCard className="price-section__card" />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </section>
