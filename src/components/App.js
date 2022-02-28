@@ -1,11 +1,11 @@
-import './App.css';
-import MainPage from '../pages/MainPage';
-import TestDrivePage from '../pages/TestDrivePage';
-import ForKidsPage from '../pages/ForKidsPage';
-import ContactsUsPage from '../pages/ContactsUsPage';
-import GamesPage from '../pages/GamesPage';
-import FaqPage from '../pages/FaqPage';
-import NotFoundPage from '../pages/NotFoundPage';
+import "./App.css";
+import MainPage from "../pages/MainPage";
+import TestDrivePage from "../pages/TestDrivePage";
+import ForKidsPage from "../pages/ForKidsPage";
+import ContactsUsPage from "../pages/ContactsUsPage";
+import GamesPage from "../pages/GamesPage";
+import FaqPage from "../pages/FaqPage";
+import NotFoundPage from "../pages/NotFoundPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -18,10 +18,9 @@ function App() {
         <Route path="/contacts-us" element={<ContactsUsPage />} />
         <Route path="/games" element={<GamesPage />} />
         <Route path="/faq" element={<FaqPage />} />
-        <Route path='*' element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
-
   );
 }
 
