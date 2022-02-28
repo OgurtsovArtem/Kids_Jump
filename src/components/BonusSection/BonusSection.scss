@@ -1,0 +1,78 @@
+@import "../../styles/constants.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.bonus-section {
+  &__container {
+    background-color: $whiteColor;
+    border-radius: rem(30);
+    display: grid;
+    grid-template-columns: 20% 80%;
+    box-shadow: 0px rem(60) rem(100) rgba(33, 49, 133, 0.1);
+    @include adaptive-value("padding", 70, 30, $xxs);
+    @media (max-width: ($l+px)) {
+      grid-template-columns: repeat(2, 1fr);
+      @include adaptive-value("gap", 60, 30, $xxs);
+    }
+    @media (max-width: ($m+px)) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__title {
+    font-family: Lifehack Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 104px;
+    line-height: 100%;
+    color: $blueColor500;
+    text-transform: uppercase;
+    @include adaptive-value("font-size", 104, 48, $xxs);
+  }
+  &__subtitle {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    align-self: end;
+    @include adaptive-value("font-size", 32, 22, $xxs);
+    @media (max-width: ($l+px)) and (min-width: ($m+1px)) {
+      grid-row-start: 2;
+      grid-column-start: 1;
+      align-self: start;
+    }
+  }
+  &__form {
+    width: 100%;
+    @media (min-width: ($l+1px)) {
+      grid-row-start: 2;
+      grid-column-start: 2;
+      @include adaptive-value("margin-top", 70, 60, $l);
+    }
+    @media (max-width: ($l+px)) and (min-width: ($m+1px)) {
+      grid-row-start: 2;
+      grid-column-start: 2;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: ($l+1px)) {
+      margin-top: rem(36);
+    }
+    @media (max-width: ($l+px)) {
+      flex-direction: column;
+    }
+  }
+  &__input {
+    @media (max-width: ($l+px)) {
+      margin-bottom: rem(36);
+    }
+  }
+  &__button {
+    flex-shrink: 0;
+    max-width: rem(270);
+    @media (min-width: ($l+1px)) {
+      @include adaptive-value("margin-left", 70, 60, $l);
+    }
+  }
+}

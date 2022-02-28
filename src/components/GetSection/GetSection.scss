@@ -1,0 +1,45 @@
+@import "../../styles/constants.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.get-section {
+  @include adaptive-value("padding-top", 250, 120, $xxs);
+  @include adaptive-value("padding-bottom", 200, 100, $xxs);
+  &__container {
+  }
+  &__title {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    text-align: center;
+    color: $blueColor500;
+    @include adaptive-value("font-size", 104, 48, $xxs);
+    @include adaptive-value("margin-bottom", 40, 20, $xxs);
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 155%;
+    &_center {
+      text-align: center;
+    }
+    @include adaptive-value("font-size", 20, 16, $xxs);
+  }
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptive-value("margin-top", 70, 35, $xxs);
+  }
+  &__swiper {
+    padding: rem(20);
+  }
+  &__controls {
+    max-width: rem(210);
+    @include adaptive-value("margin-top", 60, 20, $xxs);
+  }
+  &__card {
+    max-width: rem(270);
+  }
+}

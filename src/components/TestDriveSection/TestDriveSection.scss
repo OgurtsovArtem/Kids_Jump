@@ -1,0 +1,57 @@
+@import "../../styles/constants.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.test-drive-section {
+  @include adaptive-value("padding-bottom", 130, 80, $xxs);
+  &__container {
+    @media (min-width: ($s+px)) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__title {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90%;
+    color: $blueColor300;
+    text-transform: uppercase;
+    @include adaptive-value("font-size", 180, 96, $xxs);
+  }
+  &__subtitle {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90%;
+    color: $blueColor300;
+    text-transform: uppercase;
+    @include adaptive-value("font-size", 90, 48, $xxs);
+
+    @media (min-width: ($s+px)) {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+  }
+  &__description {
+    @include adaptive-value("margin-top", 60, 40, $xxs);
+    @media (min-width: ($s+px)) {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 155%;
+    @include adaptive-value("font-size", 20, 16, $xxs);
+  }
+  &__button {
+    max-width: rem(450);
+    @include adaptive-value("margin-top", 60, 40, $xxs);
+    @media (min-width: ($s+px)) {
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+  }
+}
