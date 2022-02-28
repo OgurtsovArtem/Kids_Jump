@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Navigation, Pagination, Controller } from "swiper";
+import { Navigation, Controller } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SliderControls from "../SliderControls/SliderControls";
 // img
@@ -9,7 +9,6 @@ import image from "../../images/ImageSlider/main2.jpg";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 // Import styles
 import "./ImageSlider.scss";
 
@@ -38,7 +37,7 @@ function ImageSlider() {
     <div className="image-slider">
       <Swiper
         className="image-slider__main _swiper _auto-width"
-        modules={[Navigation, Pagination, Controller]}
+        modules={[Navigation, Controller]}
         spaceBetween={50}
         slidesPerView={1}
         navigation={navigation}
