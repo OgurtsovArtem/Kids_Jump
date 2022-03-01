@@ -1,0 +1,80 @@
+@import "../../styles/constants.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.box-slider {
+  &__container {
+    display: grid;
+    grid-template-areas:
+      "image title"
+      "image description"
+      "image icon";
+    background-color: $whiteColor;
+    box-shadow: 0px rem(18) rem(60) rgba(61, 70, 118, 0.1);
+    @include adaptive-value("padding", 70, 20, $xxs);
+    @include adaptive-value("border-radius", 60, 24, $xxs);
+    @include adaptive-value("column-gap", 70, 30, $xxs);
+    @include adaptive-value("row-gap", 40, 25, $xxs);
+    @media (max-width: ($m+px)) {
+      grid-template-areas:
+        "title title"
+        "description image"
+        "icon icon";
+    }
+    @media (max-width: ($s+px)) {
+      grid-template-areas:
+        "title"
+        "image"
+        "description"
+        "icon";
+    }
+  }
+  &__title {
+    grid-area: title;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @include adaptive-value("font-size", 32, 22, $xxs);
+  }
+  &__description {
+    grid-area: description;
+  }
+  &__image-box {
+    grid-area: image;
+  }
+  &__image {
+    @include adaptive-value("border-radius", 35, 24, $xxs);
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 155%;
+    @include adaptive-value("font-size", 20, 16, $xxs);
+  }
+  &__pagination {
+  }
+  &__icon-block {
+    grid-area: icon;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(15);
+    @media (max-width: ($xs+px)) {
+      flex-direction: column;
+    }
+  }
+  &__icon-box {
+    text-align: center;
+  }
+  &__icon {
+    width: rem(40);
+    height: rem(40);
+  }
+  &__icon-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 130%;
+  }
+}

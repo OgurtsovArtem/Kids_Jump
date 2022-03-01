@@ -1,0 +1,45 @@
+@import "../../styles/constants.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.other-development-section {
+  &__container {
+  }
+  &__title {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    @include adaptive-value("font-size", 104, 48, $xxs);
+  }
+  &__subtitle {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 155%;
+    text-align: center;
+    @include adaptive-value("font-size", 20, 16, $xxs);
+    @include adaptive-value("margin-top", 30, 20, $xxs);
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+  &__swiper {
+    padding: rem(30) rem(70);
+  }
+  &__button-left {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  &__button-right {
+  }
+  &__pagination {
+  }
+  &__pagination-total {
+  }
+  &__pagination-current {
+  }
+}
