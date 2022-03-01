@@ -8,6 +8,7 @@ import PackageSection from "../components/PackageSection/PackageSection";
 import GetSection from "../components/GetSection/GetSection";
 import TestDriveSection from "../components/TestDriveSection/TestDriveSection";
 import BonusSection from "../components/BonusSection/BonusSection";
+import OtherDevelopmentsSection from "../components/OtherDevelopmentsSection/OtherDevelopmentsSection";
 
 function MainPage() {
   return (
@@ -22,6 +23,7 @@ function MainPage() {
       <GetSection />
       <TestDriveSection />
       <BonusSection />
+      <OtherDevelopmentsSection />
     </>
   );
 }
