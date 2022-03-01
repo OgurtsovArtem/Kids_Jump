@@ -1,7 +1,11 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import ImageSlider from "../../Ui-Kit/ImageSlider/ImageSlider";
 import TextButton from "../../Ui-Kit/TextButton/TextButton";
 import CheckList from "../../Ui-Kit/CheckList/CheckList";
+
+// Import Swiper styles
+import "swiper/css";
 
 import "../../styles/technicalClasses.scss";
 import "./TabsSection.scss";
@@ -63,10 +67,30 @@ function TabsSection() {
         projector, computer and special software.
       </p>
       <div className="tabs-section__tabs-container">
-        <TextButton className="tabs-section__tab" text="1. Ceiling version" />
-        <TextButton className="tabs-section__tab" text="2. Mobile version" />
-        <TextButton className="tabs-section__tab" text="3. Floor stand " />
+        <Swiper
+          className="tabs-section__swiper"
+          spaceBetween={40}
+          slidesPerView="auto"
+          freeMode={true}
+        >
+          <SwiperSlide>
+            <TextButton
+              className="tabs-section__tab"
+              text="1. Ceiling version"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <TextButton
+              className="tabs-section__tab"
+              text="2. Mobile version"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <TextButton className="tabs-section__tab" text="3. Floor stand " />
+          </SwiperSlide>
+        </Swiper>
       </div>
+
       <div className="tabs-section__content">
         <div className="tabs-section__photos">
           <ImageSlider />

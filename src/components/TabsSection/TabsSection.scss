@@ -25,17 +25,19 @@
       text-align: center;
     }
   }
+  &__swiper {
+    padding: rem(15);
+  }
   &__tabs-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: auto;
-    overflow-y: hidden;
     gap: rem(36);
     margin-top: rem(30);
     padding-top: rem(20);
     padding-bottom: rem(20);
   }
+
   &__tab {
     white-space: nowrap;
   }

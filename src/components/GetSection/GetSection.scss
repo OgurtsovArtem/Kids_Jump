@@ -33,7 +33,7 @@
     @include adaptive-value("margin-top", 70, 35, $xxs);
   }
   &__swiper {
-    padding: rem(20);
+    padding: rem(10);
   }
   &__controls {
     max-width: rem(210);

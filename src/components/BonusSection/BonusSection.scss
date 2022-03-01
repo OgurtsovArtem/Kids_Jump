@@ -70,7 +70,7 @@
   }
   &__button {
     flex-shrink: 0;
-    max-width: rem(270);
+    max-width: rem(280);
     @media (min-width: ($l+1px)) {
       @include adaptive-value("margin-left", 70, 60, $l);
     }

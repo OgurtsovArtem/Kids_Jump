@@ -19,8 +19,9 @@ function PriceSection() {
           <Swiper
             className="price-section__swiper _swiper _auto-width"
             spaceBetween={40}
-            slidesPerView="auto"
+            slidesPerView={"auto"}
             freeMode={true}
+            onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>
               <PriceCard className="price-section__card" />

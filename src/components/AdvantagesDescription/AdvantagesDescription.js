@@ -92,7 +92,6 @@ function AdvantagesTopSection({ className }) {
               navigation={navigation}
               pagination={pagination}
               centeredSlides={true}
-              onSwiper={(swiper) => console.log(swiper)}
               breakpoints={breakpoints}
             >
               <SwiperSlide>
