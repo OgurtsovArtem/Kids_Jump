@@ -61,7 +61,7 @@ function GetSection() {
         </p>
         <div className="get-section__cards">
           <Swiper
-            className="get-section__swiper _swiper _auto-width"
+            className="get-section__swiper _swiper _auto-width _hide-lock-buttons"
             modules={[Navigation, Pagination]}
             slidesPerView="auto"
             freeMode={true}

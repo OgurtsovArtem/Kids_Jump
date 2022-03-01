@@ -68,7 +68,7 @@ function TabsSection() {
       </p>
       <div className="tabs-section__tabs-container">
         <Swiper
-          className="tabs-section__swiper"
+          className="tabs-section__swiper _swiper _auto-width"
           spaceBetween={40}
           slidesPerView="auto"
           freeMode={true}
