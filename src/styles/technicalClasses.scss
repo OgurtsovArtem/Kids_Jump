@@ -16,4 +16,7 @@
   &._auto-width .swiper-slide {
     width: auto;
   }
+  &._hide-lock-buttons .swiper-button-lock {
+    display: none;
+  }
 }
