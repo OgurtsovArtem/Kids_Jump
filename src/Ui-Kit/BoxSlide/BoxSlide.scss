@@ -16,12 +16,14 @@
     @include adaptive-value("column-gap", 70, 30, $xxs);
     @include adaptive-value("row-gap", 40, 25, $xxs);
     @media (max-width: ($m+px)) {
+      box-shadow: 0px rem(6) rem(20) rgba(61, 70, 118, 0.1);
       grid-template-areas:
         "title title"
         "description image"
         "icon icon";
     }
     @media (max-width: ($s+px)) {
+      box-shadow: 0px rem(3) rem(12) rgba(61, 70, 118, 0.1);
       grid-template-areas:
         "title"
         "image"
