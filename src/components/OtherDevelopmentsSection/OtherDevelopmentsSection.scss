@@ -3,6 +3,8 @@
 @import "../../styles/mixin.scss";
 
 .other-development-section {
+  @include adaptive-value("margin-top", 240, 100, $xxs);
+  @include adaptive-value("margin-bottom", 240, 100, $xxs);
   &__container {
   }
   &__title {
@@ -23,18 +25,33 @@
     @include adaptive-value("margin-top", 30, 20, $xxs);
   }
   &__body {
-    display: flex;
-    align-items: center;
+    @media (min-width: ($s+1px)) {
+      display: flex;
+      align-items: center;
+    }
   }
   &__swiper {
-    padding: rem(30) rem(70);
+    @include adaptive-value("padding-top", 30, 15, $xxs);
+    @include adaptive-value("padding-right", 70, 0, $xxs);
+    @include adaptive-value("padding-bottom", 70, 20, $xxs);
+    @include adaptive-value("padding-left", 70, 0, $xxs);
   }
   &__button-left {
     svg {
       transform: rotate(180deg);
     }
+    &_desctop {
+      @media (max-width: ($s+1px)) {
+        display: none;
+      }
+    }
   }
   &__button-right {
+    &_desctop {
+      @media (max-width: ($s+1px)) {
+        display: none;
+      }
+    }
   }
   &__pagination {
   }

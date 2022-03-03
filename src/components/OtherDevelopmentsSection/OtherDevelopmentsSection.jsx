@@ -32,7 +32,9 @@ function OtherDevelopmentsSection() {
         </h3>
         <div className="other-development-section__body">
           <ArrowButtonSmall
-            className={"other-development-section__button-left"}
+            className={
+              "other-development-section__button-left other-development-section__button-left_desctop"
+            }
           />
           <Swiper
             className="other-development-section__swiper"
@@ -51,7 +53,9 @@ function OtherDevelopmentsSection() {
             </SwiperSlide>
           </Swiper>
           <ArrowButtonSmall
-            className={"other-development-section__button-right"}
+            className={
+              "other-development-section__button-right other-development-section__button-left_desctop"
+            }
           />
         </div>
       </div>
