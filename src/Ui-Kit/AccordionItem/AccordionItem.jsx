@@ -8,7 +8,7 @@ function AccordionItem({
   activeIndex,
   data,
   index,
-  showOnce,
+  initRerender,
 }) {
   // Ссылка на тело аккордиона.
   const [bodyActive, setBodyActive] = React.useState(false);
@@ -18,7 +18,7 @@ function AccordionItem({
   function showBody() {
     // Показ только 1 открытого аккордиона.
     if (showOnlyOnce) {
-      showOnce();
+      initRerender();
     }
     //открытие/закрытие
     if (bodyActive) {
