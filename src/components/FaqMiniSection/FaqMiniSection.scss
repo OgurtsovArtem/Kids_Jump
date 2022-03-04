@@ -1,0 +1,35 @@
+@import "../../styles/constants.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.faq-mini-section {
+  @include adaptive-value("margin-top", 240, 100, $xxs);
+  @include adaptive-value("margin-bottom", 240, 100, $xxs);
+  &__container {
+  }
+  &__title {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $blueColor500;
+    @include adaptive-value("font-size", 104, 48, $xxs);
+  }
+  &__subtitle {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 155%;
+    @include adaptive-value("font-size", 20, 16, $xxs);
+    @include adaptive-value("margin-top", 30, 20, $xxs);
+  }
+  &__list {
+    @include adaptive-value("margin-top", 60, 35, $xxs);
+  }
+  &__accordion-item {
+  }
+  &__button {
+    margin: 0 auto;
+    @include adaptive-value("margin-top", 60, 40, $xxs);
+  }
+}

@@ -1,6 +1,9 @@
 import Accordion from "../../Ui-Kit/Accordion/Accordion";
+import Button from "../../Ui-Kit/Button/Button";
 
-function FaqMiniSectiono() {
+import "./FaqMiniSection.scss";
+
+function FaqMiniSection() {
   const data = [
     {
       id: 1,
@@ -30,21 +33,23 @@ function FaqMiniSectiono() {
   ];
   return (
     <section className="faq-mini-section">
-      <div className="faq-mini-section__container">
+      <div className="faq-mini-section__container _container">
         <h2 className="faq-mini-section__title">FAQ</h2>
         <h3 className="faq-mini-section__subtitle">
           Nulla facilisi nullam vehicula ipsum. Purus sit amet volutpat
           consequat mauris nunc congue nisi vitae.
         </h3>
-        <div className="faq-mini-section___lsit">
+        <div className="faq-mini-section__list">
           <Accordion
-            className={"faq-mini-section___accordion-item"}
+            className={"faq-mini-section__accordion-item"}
             list={data}
+            showElementIndex={0}
           />
         </div>
+        <Button className={"faq-mini-section__button"} text={"Read all FAq"} />
       </div>
     </section>
   );
 }
 
-export default FaqMiniSectiono;
+export default FaqMiniSection;
