@@ -1,0 +1,73 @@
+@import "../../styles/constants.scss";
+@import "../../styles/functions.scss";
+@import "../../styles/mixin.scss";
+
+.contact-us-section {
+  &__container {
+    display: flex;
+    @include adaptive-value("gap", 80, 40, $xxs);
+    @media (max-width: ($s+px)) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__form {
+    background-color: $whiteColor;
+    box-shadow: 0px 18px 60px rgba(61, 70, 118, 0.1);
+    @include adaptive-value("padding-top", 70, 40, $xxs);
+    @include adaptive-value("padding-bottom", 70, 40, $xxs);
+    @include adaptive-value("padding-left", 100, 30, $xxs);
+    @include adaptive-value("padding-right", 100, 30, $xxs);
+    @include adaptive-value("border-radius", 60, 24, $xxs);
+  }
+  &__legend {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    @include adaptive-value("font-size", 32, 22, $xxs);
+    @include adaptive-value("margin-bottom", 75, 40, $xxs);
+  }
+  &__input {
+    @include adaptive-value("margin-bottom", 48, 24, $xxs);
+  }
+  &__textarea {
+  }
+  &__info {
+  }
+  &__title {
+    font-family: "Lifehack Sans";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $blueColor500;
+    @include adaptive-value("font-size", 104, 48, $xxs);
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 155%;
+    @include adaptive-value("font-size", 20, 16, $xxs);
+    @include adaptive-value("margin-top", 30, 20, $xxs);
+  }
+  &__button {
+    @include adaptive-value("margin-top", 60, 40, $xxs);
+    margin: 0 auto;
+  }
+  &__social-link {
+    display: flex;
+    @include adaptive-value("margin-top", 30, 10, $xxs);
+  }
+  &__social-icon {
+    width: rem(40);
+    height: rem(40);
+  }
+  &__social-text {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    color: $blueColor600;
+    @include adaptive-value("font-size", 26, 20, $xxs);
+    @include adaptive-value("margin-left", 24, 12, $xxs);
+  }
+}
