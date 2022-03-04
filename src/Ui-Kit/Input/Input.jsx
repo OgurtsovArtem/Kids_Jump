@@ -1,10 +1,10 @@
 import "./Input.scss";
 
-function Input({ classname, placeholder }) {
+function Input({ className, placeholder, type = "text" }) {
   return (
     <input
-      className={`${classname} input`}
-      type="text"
+      className={`${className} input`}
+      type={type}
       placeholder={placeholder}
     />
   );
