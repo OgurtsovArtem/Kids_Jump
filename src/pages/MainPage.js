@@ -9,7 +9,8 @@ import GetSection from "../components/GetSection/GetSection";
 import TestDriveSection from "../components/TestDriveSection/TestDriveSection";
 import BonusSection from "../components/BonusSection/BonusSection";
 import OtherDevelopmentsSection from "../components/OtherDevelopmentsSection/OtherDevelopmentsSection";
-import FaqMiniSectiono from "../components/FaqMiniSection/FaqMiniSection";
+import FaqMiniSection from "../components/FaqMiniSection/FaqMiniSection";
+import ContactUsSection from "../components/ContactUsSection/ContactUs";
 
 function MainPage() {
   return (
@@ -25,7 +26,8 @@ function MainPage() {
       <TestDriveSection />
       <BonusSection />
       <OtherDevelopmentsSection />
-      <FaqMiniSectiono />
+      <FaqMiniSection />
+      <ContactUsSection />
     </>
   );
 }
